@@ -1,6 +1,23 @@
 # FileEncrypt
 A simple command line tool for encryption and decrypting files with AES
 
+## Usage
+
+Encryption (Powershell):
+```
+.\FileEncrypt encrypt file_path
+```
+The output will be saved on the same directory of the file (.encrypted extension), with decryption keys.
+
+Decryption (Powershell):
+
+```
+.\FileEncrypt decrypt file_path decryption_key decryption_iv
+```
+The output will be saved on the same directory of the encrypted version of file.
+
+## Why I created it?
+
 I created this tool for using with Github actions when publishing signed Nuget packages.
 
 Here as an example of Github action that you can use:
