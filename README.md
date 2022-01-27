@@ -48,10 +48,10 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ./src/OpenAPI.Net/OpenAPI.Net.csproj
+      run: dotnet restore ./my_project.csproj
 
     - name: Build
-      run: dotnet build ./src/OpenAPI.Net/OpenAPI.Net.csproj --configuration Release --no-restore
+      run: dotnet build ./my_project.csproj --configuration Release --no-restore
 
     - name: Decrypt Certificate
       run: .\FileEncrypt decrypt .\certificate.pfx.encrypted ${{secrets.CERTIFICATE_DECRYPTION_KEY}} ${{secrets.CERTIFICATE_DECRYPTION_IV}}
