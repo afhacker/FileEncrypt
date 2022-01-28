@@ -20,7 +20,7 @@ The output will be saved on the same directory of the encrypted version of file.
 
 I created this tool for using with Github actions when publishing signed Nuget packages.
 
-Here as an example of Github action that you can use:
+Here is an example of Github action that you can use:
 
 ```yaml
 name: Publish Nuget Package When Pre-Released
