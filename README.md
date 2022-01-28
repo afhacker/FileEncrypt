@@ -59,11 +59,8 @@ jobs:
     - name: Sign Package
       run: nuget sign **\*.nupkg -CertificatePath certificate.pfx -Timestamper http://timestamp.digicert.com/ -CertificatePassword ${{secrets.CERTIFICATE_PASSWORD}} -NonInteractive
 
-    - name: Publish Package
+    - name: Publish Package and Symbols
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json'
-
-    - name: Publish Symbols
-      run: nuget push **\*.snupkg -Source 'https://api.nuget.org/v3/index.json'
 ```
 
 You must publish the FileEncrypt app as self contained and put it on your Github repository root.
